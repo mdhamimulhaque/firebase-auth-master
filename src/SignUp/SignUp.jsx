@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.init";
 import Swal from 'sweetalert2';
 
@@ -51,12 +51,16 @@ const SignUp = () => {
                 })
 
                 handleEmailVerify();
+                handleUserName(name);
                 form.reset();
+
+                console.log(user)
             })
             .catch((error) => {
                 console.error(error)
             });
     }
+
 
     // ---> email verification
     const handleEmailVerify = () => {
@@ -72,6 +76,18 @@ const SignUp = () => {
                     }
                 })
             })
+    }
+
+
+    const handleUserName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name,
+        })
+            .then(() => {
+                console.log("user name set successfully")
+            }).catch((error) => {
+                console.error(error)
+            });
     }
 
 
