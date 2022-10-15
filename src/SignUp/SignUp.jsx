@@ -53,8 +53,6 @@ const SignUp = () => {
                 handleEmailVerify();
                 handleUserName(name);
                 form.reset();
-
-                console.log(user)
             })
             .catch((error) => {
                 console.error(error)
@@ -67,7 +65,7 @@ const SignUp = () => {
         sendEmailVerification(auth.currentUser)
             .then(() => {
                 Swal.fire({
-                    title: 'Please Check your email and verify',
+                    title: 'Please Check your email and verify Your Email',
                     showClass: {
                         popup: 'animate__animated animate__fadeInDown'
                     },
@@ -89,8 +87,6 @@ const SignUp = () => {
                 console.error(error)
             });
     }
-
-
 
 
 

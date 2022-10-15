@@ -42,7 +42,7 @@ const UserWelcome = ({ user, setUser }) => {
                     onClick={handleLogOut}
                     className="px-8 py-3 font-semibold rounded bg-white text-amber-400 hover:bg-amber-400 hover:text-white duration-300 mt-3"
                 >
-                    Sign Out
+                    Log Out
                 </button>
 
             </div>
