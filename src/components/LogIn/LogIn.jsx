@@ -52,7 +52,8 @@ const LogIn = () => {
                     <p className='text-center'>or use one of these options</p>
                     {!user.email ?
                         <Google user={user} setUser={setUser} />
-                        : <UserWelcome user={user} setUser={setUser} />}
+                        : <UserWelcome user={user} setUser={setUser} />
+                    }
 
                     <button type="button" className="px-8 py-3 font-semibold rounded bg-white text-amber-400 hover:bg-amber-400 hover:text-white duration-300">Github</button>
                     <button type="button" className="px-8 py-3 font-semibold rounded bg-white text-amber-400 hover:bg-amber-400 hover:text-white duration-300">Twitter</button>
