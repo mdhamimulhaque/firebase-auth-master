@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const auth = getAuth(app)
 
-const Google = ({ user, setUser }) => {
+const Google = () => {
     const googleProvider = new GoogleAuthProvider();
 
 
@@ -14,7 +14,7 @@ const Google = ({ user, setUser }) => {
         signInWithPopup(auth, googleProvider)
             .then(res => {
                 const user = res.user;
-                setUser(user);
+                console.log(user);
 
                 Swal.fire({
                     position: 'top-end',
@@ -30,9 +30,6 @@ const Google = ({ user, setUser }) => {
     }
 
 
-    if (user.email) {
-        alert("logIn successfully")
-    }
     return (
         <div>
             <button type="button"

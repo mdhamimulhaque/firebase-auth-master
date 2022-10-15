@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import Github from '../GitHub/Github';
 
 
 import Google from '../Google/Google';
 import LogInForm from '../LogInForm/LogInForm';
-import UserWelcome from '../UserWelcome/UserWelcome';
+
 
 
 
@@ -21,7 +22,7 @@ const LogIn = () => {
                     <p className='text-center'>or use one of these options</p>
                     <Google user={user} setUser={setUser} />
 
-                    <button type="submit" className="px-8 py-3 font-semibold rounded bg-white text-amber-400 hover:bg-amber-400 hover:text-white duration-300">Github</button>
+                    <Github user={user} setUser={setUser} />
                     <button type="submit" className="px-8 py-3 font-semibold rounded bg-white text-amber-400 hover:bg-amber-400 hover:text-white duration-300">Twitter</button>
                     <button type="submit" className="px-8 py-3 font-semibold rounded bg-white text-amber-400 hover:bg-amber-400 hover:text-white duration-300">Facebook</button>
                 </div>
